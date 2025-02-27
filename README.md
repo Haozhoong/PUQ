@@ -1,6 +1,6 @@
-### PUG: Phase-wise Uncertainty Guided qMRI Reconstruction
+### PUG: Phase-wise Uncertainty Guided QMRI Reconstruction
 
-This repository provides the code for the Phase-wise Uncertainty Guided (PUG) method for quantitative magnetic resonance imaging (qMRI) reconstruction. PUG leverages phase-wise uncertainty to guide the parameter fitting process, enhancing reconstruction accuracy. The method incorporates Monte Carlo Dropout (MC Dropout) for uncertainty measurement and employs a two-stage reconstruction and fitting framework.
+This repository provides the code for the Phase-wise Uncertainty Guided method for quantitative magnetic resonance imaging (qMRI) reconstruction. PUQ leverages phase-wise uncertainty to guide the parameter fitting process, enhancing reconstruction accuracy. The method incorporates Monte Carlo Dropout (MC Dropout) for uncertainty measurement and employs a two-stage reconstruction and fitting framework.
 
 **The corresponding paper has been submitted to MICCAI 2025.**
 
@@ -41,7 +41,7 @@ PUG training follows a two-step process:
 All necessary training commands are included in `commands.sh`.
 
 ##### Testing
-The testing procedure is outlined in **test.ipynb**. We provide trained models, which can be downloaded in https://1drv.ms/f/c/3a8b097d5fc24529/ErJv1gS-knVAmulEwYvOhasBII2n7ABtsJoDdSn3OfBPRg?e=Ooyp8T and placed in the `./` directory for evaluation.
+The testing procedure is outlined in **test.ipynb**. We provide trained models, which can be downloaded in https://1drv.ms/f/c/3a8b097d5fc24529/ErJv1gS-knVAmulEwYvOhasB8RuStx2gHztZ6QGyql64Fg?e=0yh2ub and placed in the `./` directory for evaluation.
 
 ---
 
