@@ -1,0 +1,42 @@
+# Data
+data:
+  data_type: vivo                
+  mapping: T2
+  TEs: [0, 25, 35, 45, 65, 85, 105, 125]
+  q_max: 2
+  mask_type: cartesian              
+  center_fractions: 0.08
+  sampling_factor: 6                # UnderSampling factor
+  n_coils: 8                        # Coils Number
+  img_size: 160                     # size of training images
+  root_dir: '../../dataset/brainmapping'
+  recon_model_path: './config/Deept1_recon.yaml'
+
+model:
+  model_name: unet             
+  hidden: 64
+  dropout: 0.
+  sigmoid: True
+
+train:
+  optimizer: Adam              
+  LR: 0.001
+  weight_decay: 0.
+  loss: L2                     
+  epoches: 200                 # total training epoches
+  batch_size: 16                # barch size
+  repara: False
+  device: cuda
+  vis_interval: 10             # print loss for every ? step
+  seed: 5200
+  grad_max_norm: 0.
+  state: 'fitting'
+  loss_mask: True
+  sampling_times: 1
+  q_th: True
+
+sl:
+  save_dir: './export'
+  save_sub_dir: ''
+  save_label: ''
+  resume_training: No

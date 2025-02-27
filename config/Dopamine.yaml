@@ -1,0 +1,40 @@
+# Data
+data:
+  data_type: vivo                
+  mapping: T2
+  TEs: [0, 25, 35, 45, 65, 85, 105, 125]
+  q_max: 2
+  mask_type: cartesian              
+  center_fractions: 0.08
+  sampling_factor: 6                # UnderSampling factor
+  n_coils: 8                        # Coils Number
+  img_size: 160                     # size of training images
+  root_dir: '../../dataset/brainmapping'
+
+model:
+  model_name: Dopamine         
+  hidden: 64
+  Nconv: 5
+  Niter: 10
+  lambda_k: 0.01
+  mu_k: 0.01
+
+train:
+  optimizer: Adam              
+  loss: L1
+  LR: 0.001
+  weight_decay: 0.
+  epoches: 200                 # total training epoches
+  batch_size: 16               # barch size
+  device: cuda
+  vis_interval: 10             # print loss for every ? step
+  seed: 42
+  grad_max_norm: -1
+  loss_mask: True
+  q_th: True
+
+sl:
+  save_dir: './export'
+  save_sub_dir: ''
+  save_label: ''
+  resume_training: No

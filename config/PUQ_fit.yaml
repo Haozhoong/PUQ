@@ -1,0 +1,41 @@
+# Data
+data:
+  data_type: vivo                
+  mapping: T2
+  TEs: [0, 25, 35, 45, 65, 85, 105, 125]
+  q_max: 2
+  mask_type: cartesian              
+  center_fractions: 0.08
+  sampling_factor: 6                # UnderSampling factor
+  n_coils: 8                        # Coils Number
+  img_size: 160                     # size of training images
+  root_dir: '../../dataset/brainmapping'
+  data_dir: '../../dataset/brainmapping_pixels_t2/pixels_model_uq_down_6_s100_exp_recon_para_slash_t2_6_n128_0.3_s0.yaml'
+
+model:
+  model_name: fcn
+  hidden_ch: 64
+  num_layers: 5
+  pipe_type: 'model_uq'
+  sigmoid: True
+
+train:
+  optimizer: Adam              
+  LR: 0.001
+  weight_decay: 0.
+  loss: L2                     
+  epoches: 200                   # total training epoches
+  batch_size: 1024               # batch size
+  device: cuda
+  vis_interval: 1000             # print loss for every ? step
+  seed: 42
+  grad_max_norm: 0
+  state: 'fitting'
+  loss_mask: True
+  q_th: True
+
+sl:
+  save_dir: './export'
+  save_sub_dir: ''
+  save_label: ''
+  resume_training: False

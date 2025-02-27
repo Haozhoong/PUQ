@@ -1,0 +1,43 @@
+# Data
+data:
+  data_type: vivo                
+  mapping: T2
+  TEs: [0, 25, 35, 45, 65, 85, 105, 125]
+  q_max: 2
+  mask_type: cartesian              
+  center_fractions: 0.08
+  sampling_factor: 6                # UnderSampling factor
+  n_coils: 8                        # Coils Number
+  img_size: 160                     # size of training images
+  root_dir: '../../dataset/brainmapping'
+
+model:
+  model_name: unroll             
+  n_layers: 6
+  n_hiddens: 128                 
+  k_iters: 5
+  dropout: 0.3
+  res: False
+  varhead: False
+
+train:
+  optimizer: Adam              
+  LR: 0.01
+  weight_decay: 0.
+  loss: L2                     # loss function: L1, MSE
+  epoches: 2000                # total training epoches
+  batch_size: 32               # barch size
+  repara: False
+  device: cuda
+  vis_interval: 10             # print loss for every ? step
+  seed: 42
+  grad_max_norm: 0.001
+  state: 'recon'
+  std: True
+  q_th: True
+
+sl:
+  save_dir: './export'
+  save_sub_dir: ''
+  save_label: ''
+  resume_training: No
