@@ -9,7 +9,7 @@ data:
   sampling_factor: 6                # UnderSampling factor
   n_coils: 8                        # Coils Number
   img_size: 160                     # size of training images
-  root_dir: '../../dataset/brainmapping'
+  root_dir: './brainmapping'
   recon_model_path: './config/Deept1_recon.yaml'
 
 model:
