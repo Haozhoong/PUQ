@@ -58,7 +58,7 @@ val_loader = torch.utils.data.DataLoader(dataset=val_dataset,
 # 1. use data point from the ground truth
 # 2. use data point from the model without uq
 # 3. use data point from the model with uq
-export_path = '/data/smart/shz/dataset/brainmapping_pixels_' + data_type
+export_path = './brainmapping_pixels_' + data_type
 export_sub = f'pixels_{pipe_type}_down_{args.sampling_factor}'
 if sample_times > 1:
     export_sub += f'_s{sample_times}'
