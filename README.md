@@ -41,7 +41,7 @@ PUG training follows a two-step process:
 All necessary training commands are included in `commands.sh`.
 
 ##### Testing
-The testing procedure is outlined in **test.ipynb**. We provide trained models, which can be downloaded and placed in the `./` directory for evaluation.
+The testing procedure is outlined in **test.ipynb**. We provide trained models, which can be downloaded in https://1drv.ms/f/c/3a8b097d5fc24529/ErJv1gS-knVAmulEwYvOhasBII2n7ABtsJoDdSn3OfBPRg?e=Ooyp8T and placed in the `./` directory for evaluation.
 
 ---
 
