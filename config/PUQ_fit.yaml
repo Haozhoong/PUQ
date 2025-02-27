@@ -9,8 +9,8 @@ data:
   sampling_factor: 6                # UnderSampling factor
   n_coils: 8                        # Coils Number
   img_size: 160                     # size of training images
-  root_dir: '../../dataset/brainmapping'
-  data_dir: '../../dataset/brainmapping_pixels_t2/pixels_model_uq_down_6_s100_exp_recon_para_slash_t2_6_n128_0.3_s0.yaml'
+  root_dir: './brainmapping'
+  data_dir: './brainmapping_pixels_t2/pixels_model_uq_down_6_s100_exp_recon_para_slash_t2_6_n128_0.3_s0.yaml'
 
 model:
   model_name: fcn
