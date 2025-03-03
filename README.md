@@ -1,4 +1,4 @@
-### PUG: Phase-wise Uncertainty Guided QMRI Reconstruction
+### PUQ: Phase-wise Uncertainty Guided QMRI Reconstruction
 
 This repository provides the code for the Phase-wise Uncertainty Guided method for quantitative magnetic resonance imaging (qMRI) reconstruction. PUQ leverages phase-wise uncertainty to guide the parameter fitting process, enhancing reconstruction accuracy. The method incorporates Monte Carlo Dropout (MC Dropout) for uncertainty measurement and employs a two-stage reconstruction and fitting framework.
 
